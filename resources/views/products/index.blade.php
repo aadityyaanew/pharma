@@ -10,50 +10,50 @@
 
 @section('content')
     <!-- Products Hero Banner -->
-    <section class="relative bg-gradient-to-b from-slate-900 via-sky-950 to-slate-900 text-white pt-24 pb-20 overflow-hidden">
+    <section class="relative bg-gradient-to-b from-slate-900 via-sky-950 to-slate-900 text-white pt-16 pb-12 sm:pt-24 sm:pb-20 overflow-hidden">
         <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px]"></div>
         
         <!-- Ambient Glow -->
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-400/30 text-teal-300 text-xs font-bold tracking-wider uppercase mb-6 shadow-sm">
+            <div class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-400/30 text-teal-300 text-[11px] sm:text-xs font-bold tracking-wider uppercase mb-4 sm:mb-6 shadow-sm">
                 <i class="fa-solid fa-pills"></i> JAY AMBE LIFE CARE MEDICINES
             </div>
             
-            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-4 sm:mb-6">
                 Our Medicines & Pharmaceutical Range
             </h1>
             
-            <p class="max-w-3xl mx-auto text-slate-300 text-base sm:text-lg font-light leading-relaxed">
+            <p class="max-w-3xl mx-auto text-slate-300 text-xs sm:text-base lg:text-lg font-light leading-relaxed">
                 Manufactured under WHO-GMP cleanroom standards with authenticated lot assay documentation. Available for institutional hospital procurement, wholesale distribution, and monopoly PCD franchise allocation.
             </p>
 
             <!-- Quick Specs Ribbon -->
-            <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 mt-10 text-xs text-teal-200/90 font-medium">
-                <div class="flex items-center gap-2">
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-8 mt-6 sm:mt-10 text-[11px] sm:text-xs text-teal-200/90 font-medium">
+                <div class="flex items-center gap-1.5 sm:gap-2">
                     <i class="fa-solid fa-award text-teal-400"></i>
-                    <span>WHO-GMP Compliant Standards</span>
+                    <span>WHO-GMP Compliant</span>
                 </div>
                 <div class="hidden sm:block h-3 w-px bg-slate-700"></div>
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-1.5 sm:gap-2">
                     <i class="fa-solid fa-box-tissue text-teal-400"></i>
-                    <span>Hermetic Alu-Alu & Blistering</span>
+                    <span>Hermetic Alu-Alu Packing</span>
                 </div>
                 <div class="hidden sm:block h-3 w-px bg-slate-700"></div>
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-1.5 sm:gap-2">
                     <i class="fa-solid fa-certificate text-teal-400"></i>
                     <span>DCGI Approved Molecules</span>
                 </div>
                 <div class="hidden sm:block h-3 w-px bg-slate-700"></div>
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-1.5 sm:gap-2">
                     <i class="fa-solid fa-map-location-dot text-teal-400"></i>
-                    <span>Vadodara, Gujarat Supply Hub</span>
+                    <span>Vadodara Supply Hub</span>
                 </div>
             </div>
 
             <!-- Search Bar -->
-            <div class="mt-12 max-w-2xl mx-auto">
+            <div class="mt-8 sm:mt-12 max-w-2xl mx-auto">
                 <form action="{{ route('products.index') }}" method="GET" class="relative flex items-center">
                     @if($category)
                         <input type="hidden" name="category" value="{{ $category }}">
@@ -61,11 +61,12 @@
                     <input type="text" 
                            name="search" 
                            value="{{ $search ?? '' }}" 
-                           placeholder="Search medicines, tablets, syrups, or molecules (e.g. tablet, syrup, injectable)..." 
-                           class="w-full bg-slate-800/90 border border-slate-700 rounded-full pl-5 pr-32 py-3.5 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition shadow-inner">
+                           placeholder="Search medicines, tablets, syrups..." 
+                           class="w-full bg-slate-800/90 border border-slate-700 rounded-full pl-4 sm:pl-5 pr-14 sm:pr-28 py-3 sm:py-3.5 text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition shadow-inner">
                     <button type="submit" 
-                            class="absolute right-1.5 px-5 py-2.5 rounded-full bg-teal-600 hover:bg-teal-500 text-white font-semibold text-xs transition duration-200 shadow-md">
-                        <i class="fa-solid fa-magnifying-glass mr-1"></i> Search
+                            class="absolute right-1.5 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full bg-teal-600 hover:bg-teal-500 text-white font-semibold text-xs transition duration-200 shadow-md flex items-center justify-center">
+                        <i class="fa-solid fa-magnifying-glass sm:mr-1.5"></i>
+                        <span class="hidden sm:inline">Search</span>
                     </button>
                 </form>
             </div>
@@ -127,15 +128,16 @@
                         }
                     @endphp
 
-                    <!-- Entire Card Clickable Linking Directly to Product Details -->
+                    <!-- Entire Card Clickable Linking Directly to Product Details with 3D Tilt -->
                     <a href="{{ route('products.show', $product->slug) }}" 
-                       class="group bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-teal-300 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-center">
+                       data-3d-tilt
+                       class="card-3d-tilt group bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-teal-300 transition-all duration-300 flex flex-col justify-between text-center">
                         
-                        <!-- Product Image Container -->
-                        <div class="w-full aspect-square rounded-2xl bg-gradient-to-br from-slate-50 to-teal-50/50 p-6 flex items-center justify-center border border-slate-100 group-hover:bg-teal-50/80 transition-colors duration-300 overflow-hidden mb-5">
+                        <!-- Product Image Container with 3D Depth -->
+                        <div class="card-3d-content w-full aspect-square rounded-2xl bg-gradient-to-br from-slate-50 to-teal-50/50 p-6 flex items-center justify-center border border-slate-100 group-hover:bg-teal-50/80 transition-colors duration-300 overflow-hidden mb-5">
                             <img src="{{ $imageSrc }}" 
                                  alt="{{ $product->name }}" 
-                                 class="max-w-[75%] max-h-[75%] object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300">
+                                 class="max-w-[75%] max-h-[75%] object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-300">
                         </div>
 
                         <!-- Product Title -->

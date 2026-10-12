@@ -22,6 +22,9 @@
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
     
+    <!-- Three.js 3D WebGL Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <!-- Vite CSS/JS -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>

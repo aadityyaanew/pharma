@@ -9,36 +9,36 @@
 
 @section('content')
 <!-- Header Banner -->
-<section class="relative bg-gradient-to-b from-slate-900 via-sky-950 to-slate-900 text-white pt-24 pb-20 overflow-hidden">
+<section class="relative bg-gradient-to-b from-slate-900 via-sky-950 to-slate-900 text-white pt-16 pb-12 sm:pt-24 sm:pb-20 overflow-hidden">
     <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px]"></div>
-    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-400/30 text-teal-300 text-xs font-bold tracking-wider uppercase">
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 sm:space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-400/30 text-teal-300 text-[11px] sm:text-xs font-bold tracking-wider uppercase">
             <i class="fa-solid fa-staff-snake"></i> JAY AMBE LIFE CARE
         </div>
-        <h1 class="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
             Committed to Health.<br>
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-teal-300 to-emerald-400">
                 Dedicated to Life Care.
             </span>
         </h1>
-        <p class="max-w-2xl mx-auto text-slate-300 text-base sm:text-lg font-light leading-relaxed">
+        <p class="max-w-2xl mx-auto text-slate-300 text-xs sm:text-base lg:text-lg font-light leading-relaxed">
             Pioneering affordable, high-efficacy healthcare solutions and empowering pharmaceutical partnerships across Gujarat and pan-India.
         </p>
     </div>
 </section>
 
 <!-- About Content Body -->
-<section class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+<section class="py-12 sm:py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
         
         <!-- Leadership Spotlight in About -->
-        <div class="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-sm flex flex-col md:flex-row items-center gap-8">
-            <div class="relative w-36 h-36 rounded-3xl bg-gradient-to-tr from-sky-600 to-teal-500 p-1 shadow-lg shrink-0 flex items-center justify-center">
-                <div class="w-full h-full bg-white rounded-[22px] p-2 flex items-center justify-center relative overflow-hidden">
+        <div class="bg-slate-50 rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 border border-slate-200/80 shadow-sm flex flex-col md:flex-row items-center gap-6 sm:gap-8">
+            <div class="relative w-28 h-28 sm:w-36 sm:h-36 rounded-2xl sm:rounded-3xl bg-gradient-to-tr from-sky-600 to-teal-500 p-1 shadow-lg shrink-0 flex items-center justify-center">
+                <div class="w-full h-full bg-white rounded-xl sm:rounded-[22px] p-2 flex items-center justify-center relative overflow-hidden">
                     <img src="{{ asset('images/3d/doctor.png') }}" alt="MD Mr. Dev Patel" class="w-full h-full object-contain filter drop-shadow">
                 </div>
-                <div class="absolute -bottom-2 -right-2 bg-slate-900 text-white p-2 rounded-xl border-2 border-white shadow">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="w-6 h-6 object-contain">
+                <div class="absolute -bottom-2 -right-2 bg-slate-900 text-white p-1.5 sm:p-2 rounded-lg sm:rounded-xl border-2 border-white shadow">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="w-5 h-5 sm:w-6 sm:h-6 object-contain">
                 </div>
             </div>
             <div class="space-y-3 text-center md:text-left">

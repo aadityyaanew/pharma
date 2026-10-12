@@ -4,21 +4,21 @@
 
 <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-xs transition duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
+        <div class="flex items-center justify-between h-16 sm:h-20">
             
             <!-- Brand Emblem & Identity (Left) -->
-            <a href="{{ route('home') }}" class="flex items-center gap-3.5 group shrink-0">
-                <div class="relative w-12 h-12 rounded-2xl overflow-hidden p-1 bg-gradient-to-tr from-sky-600 via-teal-500 to-emerald-500 shadow-xs group-hover:scale-105 transition duration-300 flex items-center justify-center">
-                    <img src="{{ asset('images/logo.png') }}" alt="{{ $brand['name'] ?? 'Jay Ambe Life Care' }}" class="w-full h-full object-contain rounded-xl bg-white p-0.5">
+            <a href="{{ route('home') }}" class="flex items-center gap-2.5 sm:gap-3.5 group shrink-0">
+                <div class="relative w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl overflow-hidden p-0.5 sm:p-1 bg-gradient-to-tr from-sky-600 via-teal-500 to-emerald-500 shadow-xs group-hover:scale-105 transition duration-300 flex items-center justify-center shrink-0">
+                    <img src="{{ asset('images/logo.png') }}" alt="{{ $brand['name'] ?? 'Jay Ambe Life Care' }}" class="w-full h-full object-contain rounded-lg sm:rounded-xl bg-white p-0.5">
                 </div>
                 <div>
-                    <div class="flex items-baseline gap-1.5">
-                        <span class="font-serif text-2xl font-extrabold tracking-tight text-slate-900 group-hover:text-teal-700 transition">
+                    <div class="flex items-baseline gap-1 sm:gap-1.5">
+                        <span class="font-serif text-lg sm:text-2xl font-extrabold tracking-tight text-slate-900 group-hover:text-teal-700 transition">
                             JAY AMBE
                         </span>
-                        <span class="font-sans text-[11px] tracking-widest text-teal-600 font-extrabold uppercase">LIFE CARE</span>
+                        <span class="font-sans text-[9px] sm:text-[11px] tracking-widest text-teal-600 font-extrabold uppercase">LIFE CARE</span>
                     </div>
-                    <p class="text-[9px] tracking-widest uppercase text-slate-400 font-semibold flex items-center gap-1.5 -mt-0.5">
+                    <p class="text-[8px] sm:text-[9px] tracking-widest uppercase text-slate-400 font-semibold flex items-center gap-1 sm:gap-1.5 -mt-0.5">
                         <span>PHARMA</span>
                         <span class="text-teal-500">•</span>
                         <span>KARJAN, VADODARA</span>

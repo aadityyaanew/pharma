@@ -2,7 +2,7 @@
     $brand = config('velora.brand');
 @endphp
 
-<section id="hero" class="relative min-h-[90vh] flex items-center pt-16 pb-20 overflow-hidden bg-slate-100">
+<section id="hero" class="relative flex items-center pt-8 pb-12 sm:pt-16 sm:pb-20 overflow-hidden bg-slate-100">
     
     <!-- Hero Background Animation GIF -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden">
@@ -19,15 +19,13 @@
     <div class="absolute top-20 right-10 w-[400px] h-[300px] bg-teal-200/20 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
             
             <!-- Left Hero Content -->
-            <div class="lg:col-span-7 text-center lg:text-left space-y-7">
+            <div class="lg:col-span-7 text-center lg:text-left space-y-5 sm:space-y-7">
                 
-
-
                 <!-- Main Headline -->
-                <h1 class="text-4xl sm:text-5xl lg:text-[4rem] font-bold text-slate-900 leading-[1.14] tracking-tight">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-bold text-slate-900 leading-[1.18] sm:leading-[1.14] tracking-tight">
                     Reliable Medicines.<br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-700 via-teal-700 to-emerald-700">
                         Dedicated Life Care.
@@ -35,16 +33,16 @@
                 </h1>
 
                 <!-- Clear, Simple Subtext -->
-                <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto lg:mx-0">
+                <p class="text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto lg:mx-0">
                     Trusted pharmaceutical supplier based in <strong>Karjan, Vadodara</strong>. Led by <strong>Managing Director Mr. Dev Patel</strong>, we provide quality medicines, prompt delivery, and monopoly PCD franchise opportunities across Gujarat and India.
                 </p>
 
                 <!-- 3D Icon Features Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1 max-w-2xl mx-auto lg:mx-0 text-left">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3.5 pt-1 max-w-2xl mx-auto lg:mx-0 text-left">
                     
-                    <div class="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3 hover:shadow-xs transition duration-200">
-                        <div class="w-12 h-12 rounded-xl bg-teal-50 p-1 flex items-center justify-center shrink-0">
-                            <img src="{{ asset('images/3d/tablet_pack.png') }}" alt="Tablets & Capsules" class="w-10 h-10 object-contain">
+                    <div class="p-3 sm:p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3 hover:shadow-xs transition duration-200">
+                        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-teal-50 p-1 flex items-center justify-center shrink-0">
+                            <img src="{{ asset('images/3d/tablet_pack.png') }}" alt="Tablets & Capsules" class="w-9 h-9 sm:w-10 sm:h-10 object-contain">
                         </div>
                         <div>
                             <p class="text-xs font-bold text-slate-900">Tablets & Capsules</p>
@@ -52,9 +50,9 @@
                         </div>
                     </div>
 
-                    <div class="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3 hover:shadow-xs transition duration-200">
-                        <div class="w-12 h-12 rounded-xl bg-sky-50 p-1 flex items-center justify-center shrink-0">
-                            <img src="{{ asset('images/3d/transfusion.png') }}" alt="Syrups & Injections" class="w-10 h-10 object-contain">
+                    <div class="p-3 sm:p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3 hover:shadow-xs transition duration-200">
+                        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-sky-50 p-1 flex items-center justify-center shrink-0">
+                            <img src="{{ asset('images/3d/transfusion.png') }}" alt="Syrups & Injections" class="w-9 h-9 sm:w-10 sm:h-10 object-contain">
                         </div>
                         <div>
                             <p class="text-xs font-bold text-slate-900">Syrups & Injections</p>
@@ -62,9 +60,9 @@
                         </div>
                     </div>
 
-                    <div class="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3 hover:shadow-xs transition duration-200">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-50 p-1 flex items-center justify-center shrink-0">
-                            <img src="{{ asset('images/3d/first_aid.png') }}" alt="PCD Franchise" class="w-10 h-10 object-contain">
+                    <div class="p-3 sm:p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3 hover:shadow-xs transition duration-200">
+                        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-50 p-1 flex items-center justify-center shrink-0">
+                            <img src="{{ asset('images/3d/first_aid.png') }}" alt="PCD Franchise" class="w-9 h-9 sm:w-10 sm:h-10 object-contain">
                         </div>
                         <div>
                             <p class="text-xs font-bold text-slate-900">PCD Monopoly</p>
@@ -74,14 +72,14 @@
 
                 </div>
 
-                <!-- Simple Action Buttons -->
-                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+                <!-- Simple Action Buttons (full-width stacked on mobile, row on tablet/desktop) -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-2.5 sm:gap-3.5 pt-2">
                     @if(!empty($brand['whatsapp_number']))
                         <a href="https://wa.me/{{ $brand['whatsapp_number'] }}?text={{ urlencode('Hello Mr. Dev Patel, I would like to enquire about medicines and PCD franchise from Jay Ambe Life Care.') }}"
                            target="_blank"
                            rel="noopener noreferrer"
                            id="hero-whatsapp-btn"
-                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-7 py-3.5 rounded-full transition shadow-sm hover:shadow">
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-full transition shadow-sm hover:shadow">
                             <i class="fa-brands fa-whatsapp text-lg"></i>
                             <span>WhatsApp MD Desk</span>
                         </a>
@@ -89,14 +87,14 @@
 
                     <a href="{{ route('products.index') }}"
                        id="hero-explore-btn"
-                       class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-teal-800 text-white font-semibold text-sm px-7 py-3.5 rounded-full transition shadow-sm">
+                       class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-teal-800 text-white font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-full transition shadow-sm">
                         <span>View Our Medicines</span>
                         <i class="fa-solid fa-arrow-right text-[10px]"></i>
                     </a>
                 </div>
 
                 <!-- Trust Bar -->
-                <div class="pt-2 flex items-center justify-center lg:justify-start gap-6 text-xs text-slate-500 font-medium">
+                <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3.5 sm:gap-6 text-xs text-slate-500 font-medium">
                     <span class="flex items-center gap-1.5">
                         <i class="fa-solid fa-circle-check text-emerald-600"></i> Quality Formulations
                     </span>
@@ -110,17 +108,15 @@
 
             </div>
 
-            <!-- Right Hero Card with 3D Medicon Accent -->
-            <div class="lg:col-span-5 flex flex-col items-center">
-                <div class="relative w-full max-w-md">
-                    
-
+            <!-- Right Hero Card with Company Details -->
+            <div class="lg:col-span-5 flex flex-col items-center w-full">
+                <div class="relative w-full max-w-md mx-auto">
 
                     <!-- Main Card -->
-                    <div class="relative bg-white rounded-3xl p-7 sm:p-8 border border-slate-200/90 shadow-lg space-y-5">
+                    <div class="relative bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-8 border border-slate-200/90 shadow-lg space-y-4 sm:space-y-5">
                         
                         <!-- Official Brand Emblem Display -->
-                        <div class="relative mx-auto w-40 h-40 sm:w-44 sm:h-44 rounded-2xl p-3 bg-gradient-to-b from-sky-50 to-teal-50/40 border border-sky-100 flex items-center justify-center shadow-inner group">
+                        <div class="relative mx-auto w-32 h-32 sm:w-40 sm:h-40 rounded-2xl p-2.5 sm:p-3 bg-gradient-to-b from-sky-50 to-teal-50/40 border border-sky-100 flex items-center justify-center shadow-inner group">
                             <img src="{{ asset('images/logo.png') }}" 
                                  alt="Jay Ambe Life Care Logo" 
                                  class="max-h-full max-w-full object-contain drop-shadow-md group-hover:scale-105 transition duration-300">
@@ -128,24 +124,24 @@
 
                         <!-- Brand & MD Badge -->
                         <div class="text-center pt-1 border-t border-slate-100">
-                            <h2 class="font-serif text-2xl font-bold text-slate-900 tracking-tight">
+                            <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
                                 Jay Ambe Life Care
                             </h2>
-                            <p class="text-xs uppercase tracking-wider text-teal-700 font-extrabold mt-1">
+                            <p class="text-[11px] sm:text-xs uppercase tracking-wider text-teal-700 font-extrabold mt-0.5 sm:mt-1">
                                 Managing Director: {{ $brand['managing_director'] ?? 'Mr. Dev Patel' }}
                             </p>
                         </div>
 
                         <!-- Concrete Business Details -->
                         <div class="space-y-2 text-xs">
-                            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-100">
                                 <span class="text-slate-500 font-medium flex items-center gap-2">
                                     <i class="fa-solid fa-map-pin text-sky-600"></i> Location
                                 </span>
-                                <span class="font-bold text-slate-800">Karjan, Vadodara, Gujarat</span>
+                                <span class="font-bold text-slate-800 text-right">Karjan, Vadodara</span>
                             </div>
 
-                            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-100">
                                 <span class="text-slate-500 font-medium flex items-center gap-2">
                                     <i class="fa-solid fa-phone text-emerald-600"></i> Phone
                                 </span>
@@ -154,11 +150,11 @@
                                 </a>
                             </div>
 
-                            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-100">
                                 <span class="text-slate-500 font-medium flex items-center gap-2">
                                     <i class="fa-solid fa-envelope text-teal-600"></i> Email
                                 </span>
-                                <span class="font-semibold text-slate-700 truncate max-w-[180px]">{{ $brand['email'] ?? 'pdev63575@gmail.com' }}</span>
+                                <span class="font-semibold text-slate-700 truncate max-w-[170px] sm:max-w-[200px]">{{ $brand['email'] ?? 'pdev63575@gmail.com' }}</span>
                             </div>
                         </div>
 

@@ -2,30 +2,30 @@
     $brand = config('velora.brand');
 @endphp
 
-<section id="enquiry-section" class="py-24 lg:py-32 bg-slate-50 relative">
+<section id="enquiry-section" class="py-12 sm:py-20 lg:py-32 bg-slate-50 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
-            <div class="inline-flex items-center justify-center gap-3 mb-2">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-20 space-y-2.5 sm:space-y-4">
+            <div class="inline-flex items-center justify-center gap-3 mb-1 sm:mb-2">
                 <span class="h-[1px] w-8 bg-teal-600"></span>
-                <span class="text-teal-800 text-xs font-bold tracking-[0.2em] uppercase">Commercial & Franchise Inquiries</span>
+                <span class="text-teal-800 text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase">Commercial & Franchise Inquiries</span>
                 <span class="h-[1px] w-8 bg-teal-600"></span>
             </div>
             
-            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-medium text-slate-900 tracking-tight">
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-medium text-slate-900 tracking-tight">
                 Connect with Our <span class="italic font-serif text-teal-700">Commercial Desk</span>
             </h2>
-            <p class="text-slate-600 text-base sm:text-lg leading-relaxed font-normal mt-4">
+            <p class="text-slate-600 text-xs sm:text-base leading-relaxed font-normal mt-2 sm:mt-4">
                 Connect directly with <strong>Managing Director Mr. Dev Patel</strong> for district PCD franchise allocation, hospital formulary contracts, or wholesale rate inquiries.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             
             <!-- Left Contact Info with 3D Icons -->
-            <div class="lg:col-span-5 space-y-6">
+            <div class="lg:col-span-5 space-y-5 sm:space-y-6">
                 
-                <div class="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm space-y-6">
+                <div class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-slate-200/90 shadow-sm space-y-5 sm:space-y-6">
                     
                     <!-- Emblem & Title Header -->
                     <div class="flex items-center gap-4 pb-6 border-b border-slate-100">
@@ -124,10 +124,10 @@
 
             <!-- Right Interactive Form -->
             <div class="lg:col-span-7">
-                <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-200/90 h-full">
+                <div class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 shadow-sm border border-slate-200/90 h-full">
                     
-                    <div class="mb-8 text-center sm:text-left space-y-1">
-                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">Commercial & Franchise Application</h3>
+                    <div class="mb-6 sm:mb-8 text-center sm:text-left space-y-1">
+                        <h3 class="font-serif text-xl sm:text-3xl font-bold text-slate-900">Commercial & Franchise Application</h3>
                         <p class="text-xs sm:text-sm text-slate-500">Directly routed to Managing Director Mr. Dev Patel's office.</p>
                     </div>
 

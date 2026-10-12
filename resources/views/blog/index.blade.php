@@ -5,22 +5,22 @@
 
 @section('content')
     <!-- Blog Header Banner -->
-    <section class="relative bg-gradient-to-b from-slate-900 via-sky-950 to-slate-900 text-white pt-20 pb-16 overflow-hidden">
+    <section class="relative bg-gradient-to-b from-slate-900 via-sky-950 to-slate-900 text-white pt-16 pb-12 sm:pt-20 sm:pb-16 overflow-hidden">
         <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:20px_20px]"></div>
         
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-400/30 text-teal-300 text-xs font-semibold tracking-wider uppercase mb-5">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-400/30 text-teal-300 text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-3 sm:mb-5">
                 <i class="fa-solid fa-book-medical"></i> JAY AMBE PHARMA JOURNAL & RESEARCH
             </div>
-            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-4 sm:mb-6">
                 Pharmaceutical Science & Industry Insights
             </h1>
-            <p class="max-w-2xl mx-auto text-slate-300 text-base sm:text-lg font-light leading-relaxed">
+            <p class="max-w-2xl mx-auto text-slate-300 text-xs sm:text-base lg:text-lg font-light leading-relaxed">
                 Stay updated with formulation developments, WHO-GMP quality control methodologies, PCD pharma franchise opportunities, and clinical healthcare trends.
             </p>
 
             <!-- Category Pills Filter -->
-            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-10">
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-6 sm:mt-10">
                 <a href="{{ route('blog.index') }}" 
                    class="px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition {{ empty($category) ? 'bg-teal-600 text-white shadow-lg shadow-teal-500/25' : 'bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700' }}">
                     All Topics

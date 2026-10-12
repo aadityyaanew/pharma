@@ -2,62 +2,62 @@
     $brand = config('velora.brand');
 @endphp
 
-<section id="leadership" class="py-20 lg:py-28 bg-white relative overflow-hidden border-y border-slate-200">
+<section id="leadership" class="py-12 sm:py-20 lg:py-28 bg-white relative overflow-hidden border-y border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div class="bg-gradient-to-br from-slate-900 via-sky-950 to-slate-900 rounded-3xl p-8 sm:p-14 lg:p-16 text-white shadow-2xl relative overflow-hidden">
+        <div class="bg-gradient-to-br from-slate-900 via-sky-950 to-slate-900 rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-16 text-white shadow-2xl relative overflow-hidden">
             
             <!-- Ambient Highlights -->
             <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-teal-500/15 blur-3xl pointer-events-none"></div>
             <div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-sky-500/15 blur-3xl pointer-events-none"></div>
             
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
                 
                 <!-- Left Executive Profile -->
                 <div class="lg:col-span-5 flex flex-col items-center text-center">
-                    <div class="relative mb-6">
-                        <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl p-2 bg-gradient-to-tr from-sky-400/30 via-teal-300/30 to-emerald-400/30 border border-slate-700 shadow-2xl flex items-center justify-center bg-slate-900">
-                            <img src="{{ asset('images/3d/doctor.png') }}" alt="Managing Director Mr. Dev Patel" class="w-40 h-40 sm:w-48 sm:h-48 object-contain drop-shadow-xl">
+                    <div class="relative mb-5 sm:mb-6">
+                        <div class="w-40 h-40 sm:w-56 sm:h-56 rounded-2xl sm:rounded-3xl p-2 bg-gradient-to-tr from-sky-400/30 via-teal-300/30 to-emerald-400/30 border border-slate-700 shadow-2xl flex items-center justify-center bg-slate-900">
+                            <img src="{{ asset('images/3d/doctor.png') }}" alt="Managing Director Mr. Dev Patel" class="w-32 h-32 sm:w-48 sm:h-48 object-contain drop-shadow-xl">
                         </div>
-                        <div class="absolute -bottom-3 bg-emerald-600 text-white text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-lg border border-emerald-400/30">
+                        <div class="absolute -bottom-3 bg-emerald-600 text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-3.5 sm:px-4 py-1 rounded-full shadow-lg border border-emerald-400/30">
                             Managing Director
                         </div>
                     </div>
 
-                    <h3 class="font-serif text-3xl font-bold text-white tracking-tight mt-2">
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1 sm:mt-2">
                         {{ $brand['managing_director'] ?? 'Mr. Dev Patel' }}
                     </h3>
-                    <p class="text-xs uppercase tracking-wider text-teal-400 font-bold mt-1">
+                    <p class="text-[11px] sm:text-xs uppercase tracking-wider text-teal-400 font-bold mt-1">
                         Managing Director &bull; Jay Ambe Life Care
                     </p>
 
                     <!-- Direct Connect Pills -->
-                    <div class="mt-6 flex flex-col w-full max-w-xs gap-2.5 text-xs">
+                    <div class="mt-5 sm:mt-6 flex flex-col w-full max-w-xs gap-2 sm:gap-2.5 text-xs">
                         <a href="tel:{{ $brand['phone_raw'] ?? '+916352727517' }}" 
-                           class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-teal-300 border border-slate-700 transition">
+                           class="flex items-center justify-center gap-2 py-2.5 sm:py-3 px-4 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-teal-300 border border-slate-700 transition">
                             <i class="fa-solid fa-phone text-teal-400"></i>
                             <span class="font-bold">{{ $brand['phone'] ?? '+91 6352727517' }}</span>
                         </a>
 
                         <a href="mailto:{{ $brand['email'] ?? 'pdev63575@gmail.com' }}" 
-                           class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-sky-300 border border-slate-700 transition">
+                           class="flex items-center justify-center gap-2 py-2.5 sm:py-3 px-4 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-sky-300 border border-slate-700 transition">
                             <i class="fa-solid fa-envelope text-sky-400"></i>
-                            <span class="font-medium">{{ $brand['email'] ?? 'pdev63575@gmail.com' }}</span>
+                            <span class="font-medium truncate max-w-[220px]">{{ $brand['email'] ?? 'pdev63575@gmail.com' }}</span>
                         </a>
                     </div>
                 </div>
 
                 <!-- Right Message & Vision -->
-                <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-500/10 px-3.5 py-1 rounded-full border border-teal-400/20">
+                <div class="lg:col-span-7 space-y-4 sm:space-y-6">
+                    <div class="inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-500/10 px-3 sm:px-3.5 py-1 rounded-full border border-teal-400/20">
                         <i class="fa-solid fa-quote-left"></i> Managing Director's Message
                     </div>
 
-                    <h2 class="font-serif text-3xl sm:text-4xl font-medium text-white leading-tight">
+                    <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-medium text-white leading-tight">
                         "Committed to Quality Medicines & Long-Term Partnerships."
                     </h2>
 
-                    <div class="space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed font-light">
+                    <div class="space-y-2.5 sm:space-y-3 text-slate-300 text-xs sm:text-base leading-relaxed font-light">
                         <p>
                             "Welcome to <strong>Jay Ambe Life Care</strong>. Based in Karjan, Vadodara, we focus on delivering reliable medicines and supporting our franchise partners with honest business practices and timely supply."
                         </p>
@@ -67,18 +67,18 @@
                     </div>
 
                     <!-- 3 Simple Guarantees -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-3 border-t border-slate-800">
-                        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60">
-                            <p class="font-bold text-white text-sm">District Monopoly</p>
-                            <p class="text-xs text-slate-400 mt-0.5">Exclusive marketing rights</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3.5 pt-3 border-t border-slate-800">
+                        <div class="p-3 sm:p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60">
+                            <p class="font-bold text-white text-xs sm:text-sm">District Monopoly</p>
+                            <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5">Exclusive marketing rights</p>
                         </div>
-                        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60">
-                            <p class="font-bold text-white text-sm">Marketing Support</p>
-                            <p class="text-xs text-slate-400 mt-0.5">Visual aids, samples & bags</p>
+                        <div class="p-3 sm:p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60">
+                            <p class="font-bold text-white text-xs sm:text-sm">Marketing Support</p>
+                            <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5">Visual aids, samples & bags</p>
                         </div>
-                        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60">
-                            <p class="font-bold text-white text-sm">On-Time Dispatch</p>
-                            <p class="text-xs text-slate-400 mt-0.5">Prompt supply from Vadodara</p>
+                        <div class="p-3 sm:p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60">
+                            <p class="font-bold text-white text-xs sm:text-sm">On-Time Dispatch</p>
+                            <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5">Prompt supply from Vadodara</p>
                         </div>
                     </div>
 
@@ -87,7 +87,7 @@
                         <a href="https://wa.me/{{ $brand['whatsapp_number'] ?? '916352727517' }}?text={{ urlencode('Hello Mr. Dev Patel, I would like to schedule a direct discussion regarding Jay Ambe Life Care pharma supply / PCD franchise.') }}"
                            target="_blank"
                            rel="noopener noreferrer"
-                           class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs tracking-wider uppercase transition shadow-lg">
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs tracking-wider uppercase transition shadow-lg text-center">
                             <i class="fa-brands fa-whatsapp text-base"></i> Message Mr. Dev Patel Directly
                         </a>
                     </div>

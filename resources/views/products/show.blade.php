@@ -36,15 +36,15 @@
     </section>
 
     <!-- Product Main Showcase -->
-    <section class="py-16 bg-slate-50">
+    <section class="py-8 sm:py-16 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+            <div class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 border border-slate-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14">
                 
                 <!-- Left Visual Showcase -->
                 <div class="lg:col-span-5 flex flex-col justify-between">
-                    <div class="relative w-full aspect-square rounded-2xl bg-gradient-to-br from-slate-100 to-teal-50 border border-slate-200/70 flex items-center justify-center p-8 overflow-hidden group">
+                    <div class="relative w-full aspect-square rounded-2xl bg-gradient-to-br from-slate-100 to-teal-50 border border-slate-200/70 flex items-center justify-center p-6 sm:p-8 overflow-hidden group">
                         <div class="text-center">
-                            <div class="w-36 h-36 rounded-3xl bg-white shadow-xl mx-auto flex items-center justify-center p-4 mb-4 group-hover:scale-105 transition duration-300 border border-slate-100">
+                            <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-2xl sm:rounded-3xl bg-white shadow-xl mx-auto flex items-center justify-center p-4 mb-3 sm:mb-4 group-hover:scale-105 transition duration-300 border border-slate-100">
                                 @if(str_contains(strtolower($product->name), 'tablet') || str_contains(strtolower($product->name), 'capsule'))
                                     <img src="{{ asset('images/3d/tablet_pack.png') }}" alt="{{ $product->name }}" class="w-full h-full object-contain filter drop-shadow">
                                 @elseif(str_contains(strtolower($product->name), 'liquid') || str_contains(strtolower($product->name), 'syrup'))
@@ -61,64 +61,64 @@
                                     <img src="{{ asset('images/3d/prescription_pills.png') }}" alt="{{ $product->name }}" class="w-full h-full object-contain filter drop-shadow">
                                 @endif
                             </div>
-                            <span class="font-serif text-3xl font-bold text-slate-800 block">
+                            <span class="font-serif text-2xl sm:text-3xl font-bold text-slate-800 block">
                                 {{ $product->size }}
                             </span>
-                            <span class="text-xs tracking-widest uppercase text-teal-600 font-bold mt-1 block">
+                            <span class="text-[11px] sm:text-xs tracking-widest uppercase text-teal-600 font-bold mt-1 block">
                                 WHO-GMP Tested Formulations
                             </span>
                         </div>
 
                         @if($product->badge)
-                            <div class="absolute top-4 left-4 bg-slate-900 text-white font-bold text-[10px] tracking-widest uppercase px-3 py-1.5 rounded-full shadow-md">
+                            <div class="absolute top-3 left-3 sm:top-4 sm:left-4 bg-slate-900 text-white font-bold text-[9px] sm:text-[10px] tracking-widest uppercase px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full shadow-md">
                                 {{ $product->badge }}
                             </div>
                         @endif
 
-                        <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-800 shadow-xs">
+                        <div class="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 bg-white/95 backdrop-blur-md px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-xl border border-slate-200 text-[11px] sm:text-xs font-bold text-slate-800 shadow-xs">
                             <i class="fa-solid fa-check-double text-teal-600 mr-1"></i> Certified Quality
                         </div>
                     </div>
 
                     <!-- Assurance Pills -->
-                    <div class="grid grid-cols-2 gap-3 mt-6 text-xs text-slate-600">
-                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center gap-2.5">
-                            <i class="fa-solid fa-atom text-teal-600 text-base"></i>
+                    <div class="grid grid-cols-2 gap-2.5 sm:gap-3 mt-4 sm:mt-6 text-xs text-slate-600">
+                        <div class="p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center gap-2 sm:gap-2.5">
+                            <i class="fa-solid fa-atom text-teal-600 text-sm sm:text-base"></i>
                             <div>
-                                <p class="font-bold text-slate-800">WHO-GMP Compliant</p>
-                                <p class="text-[10px] text-slate-400">Sterile Assayed</p>
+                                <p class="font-bold text-slate-800 text-[11px] sm:text-xs">WHO-GMP Compliant</p>
+                                <p class="text-[9px] sm:text-[10px] text-slate-400">Sterile Assayed</p>
                             </div>
                         </div>
-                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center gap-2.5">
-                            <i class="fa-solid fa-certificate text-emerald-600 text-base"></i>
+                        <div class="p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center gap-2 sm:gap-2.5">
+                            <i class="fa-solid fa-certificate text-emerald-600 text-sm sm:text-base"></i>
                             <div>
-                                <p class="font-bold text-slate-800">Batch COA Assured</p>
-                                <p class="text-[10px] text-slate-400">Lot Traced</p>
+                                <p class="font-bold text-slate-800 text-[11px] sm:text-xs">Batch COA Assured</p>
+                                <p class="text-[9px] sm:text-[10px] text-slate-400">Lot Traced</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Column: Specs & Ordering -->
-                <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+                <div class="lg:col-span-7 flex flex-col justify-between space-y-5 sm:space-y-6">
                     <div>
                         @if($product->tagline)
-                            <p class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-2">
+                            <p class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-1.5 sm:mb-2">
                                 {{ $product->tagline }}
                             </p>
                         @endif
 
-                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+                        <h2 class="font-serif text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-3 sm:mb-4">
                             {{ $product->name }} &bull; {{ $product->size }}
                         </h2>
 
                         <!-- Commercial Terms Banner -->
-                        <div class="p-4 rounded-2xl bg-teal-50/60 border border-teal-100 flex items-center justify-between mb-6">
+                        <div class="p-3.5 sm:p-4 rounded-2xl bg-teal-50/60 border border-teal-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 mb-5 sm:mb-6">
                             <div>
-                                <span class="text-xs text-slate-500 font-medium block">Commercial & Franchise Terms</span>
-                                <span class="text-sm sm:text-base font-bold text-teal-900">Hospital Supply & PCD Monopoly Franchise</span>
+                                <span class="text-[11px] sm:text-xs text-slate-500 font-medium block">Commercial & Franchise Terms</span>
+                                <span class="text-xs sm:text-base font-bold text-teal-900">Hospital Supply & PCD Monopoly Franchise</span>
                             </div>
-                            <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-800">
+                            <span class="text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-emerald-100 text-emerald-800 shrink-0">
                                 In Stock &bull; Express Dispatch
                             </span>
                         </div>

@@ -2,10 +2,10 @@
     $brand = config('velora.brand');
 @endphp
 
-<footer class="bg-slate-950 text-slate-400 pt-20 pb-10 border-t border-slate-800/80 font-sans">
+<footer class="bg-slate-950 text-slate-400 pt-12 sm:pt-20 pb-8 sm:pb-10 border-t border-slate-800/80 font-sans">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 mb-10 sm:mb-16">
             
             <!-- Brand & Executive Overview -->
             <div class="lg:col-span-5 space-y-6 pr-0 lg:pr-10">
