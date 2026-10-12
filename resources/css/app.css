@@ -1,0 +1,77 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+
+    /* Pharma & Life Care Brand Palette */
+    --color-pharma-50: #f0fdfa;
+    --color-pharma-100: #ccfbf1;
+    --color-pharma-200: #99f6e4;
+    --color-pharma-500: #14b8a6;
+    --color-pharma-600: #0d9488;
+    --color-pharma-700: #0f766e;
+    --color-pharma-800: #115e59;
+    --color-pharma-900: #134e4a;
+
+    --color-medblue-500: #0284c7;
+    --color-medblue-600: #0369a1;
+    --color-medblue-700: #075985;
+    --color-medblue-800: #0c4a6e;
+    --color-medblue-900: #082f49;
+
+    --color-lifegreen-500: #10b981;
+    --color-lifegreen-600: #059669;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.font-brand-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+}
+
+.pharma-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pharma-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px -4px rgba(14, 116, 144, 0.12);
+    border-color: #99f6e4;
+}
+
+.pharma-hero-gradient {
+    background: radial-gradient(circle at 50% 20%, rgba(14, 165, 233, 0.12) 0%, rgba(13, 148, 136, 0.08) 35%, rgba(255, 255, 255, 0) 70%);
+}
+
+.dark-pharma-panel {
+    background: linear-gradient(135deg, #091e3a 0%, #061529 100%);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #0284c7;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0369a1;
+}
