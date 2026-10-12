@@ -105,117 +105,51 @@
                 ]);
             @endphp
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 @foreach($displayItems as $product)
                     @php
-                        $specs = is_array($product->specs) ? $product->specs : (json_decode($product->specs ?? '[]', true) ?? []);
-                        $waMsg = $product->whatsapp_text ?: ("Hi Jay Ambe Life Care, I would like to enquire about {$product->name}.");
+                        if (!empty($product->featured_image)) {
+                            $imageSrc = asset('storage/' . $product->featured_image);
+                        } elseif (str_contains(strtolower($product->name), 'tablet') || str_contains(strtolower($product->name), 'capsule')) {
+                            $imageSrc = asset('images/3d/tablet_pack.png');
+                        } elseif (str_contains(strtolower($product->name), 'liquid') || str_contains(strtolower($product->name), 'syrup')) {
+                            $imageSrc = asset('images/3d/medicine_bottle.png');
+                        } elseif (str_contains(strtolower($product->name), 'injectable') || str_contains(strtolower($product->name), 'infusion')) {
+                            $imageSrc = asset('images/3d/transfusion.png');
+                        } elseif (str_contains(strtolower($product->name), 'ointment') || str_contains(strtolower($product->name), 'derma')) {
+                            $imageSrc = asset('images/3d/first_aid.png');
+                        } elseif (str_contains(strtolower($product->name), 'nutra') || str_contains(strtolower($product->name), 'immunity')) {
+                            $imageSrc = asset('images/3d/dna.png');
+                        } elseif (str_contains(strtolower($product->name), 'cardio') || str_contains(strtolower($product->name), 'heart')) {
+                            $imageSrc = asset('images/3d/heart.png');
+                        } else {
+                            $imageSrc = asset('images/3d/prescription_pills.png');
+                        }
                     @endphp
-                    <div class="bg-white rounded-[2rem] p-7 sm:p-9 flex flex-col justify-between relative group transition-all duration-300 hover:-translate-y-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] border border-slate-200/80 {{ $product->is_featured ? 'ring-2 ring-teal-300' : '' }}">
+
+                    <!-- Entire Card Clickable Linking Directly to Product Details -->
+                    <a href="{{ route('products.show', $product->slug) }}" 
+                       class="group bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-teal-300 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between text-center">
                         
-                        <!-- Badges -->
-                        <div class="flex items-center justify-between gap-2 mb-6">
-                            <span class="text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-teal-50 text-teal-700 border border-teal-100">
-                                {{ $product->size ?? 'Pharmaceutical Division' }}
+                        <!-- Product Image Container -->
+                        <div class="w-full aspect-square rounded-2xl bg-gradient-to-br from-slate-50 to-teal-50/50 p-6 flex items-center justify-center border border-slate-100 group-hover:bg-teal-50/80 transition-colors duration-300 overflow-hidden mb-5">
+                            <img src="{{ $imageSrc }}" 
+                                 alt="{{ $product->name }}" 
+                                 class="max-w-[75%] max-h-[75%] object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300">
+                        </div>
+
+                        <!-- Product Title -->
+                        <div class="space-y-2">
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-teal-700 transition-colors line-clamp-2">
+                                {{ $product->name }}
+                            </h3>
+                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-600 group-hover:text-teal-800 transition">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
                             </span>
-
-                            @if($product->badge)
-                                <span class="text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-full bg-slate-900 text-white shadow-sm">
-                                    {{ $product->badge }}
-                                </span>
-                            @elseif($product->is_featured)
-                                <span class="text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-full bg-teal-600 text-white shadow-sm">
-                                    Flagship Molecule
-                                </span>
-                            @endif
                         </div>
 
-                        <div>
-                            <!-- Visual Graphic Showcase with 3D Medicons -->
-                            <div class="relative w-full h-52 sm:h-56 rounded-2xl bg-gradient-to-br from-slate-50 to-teal-50/50 border border-slate-100 flex items-center justify-center overflow-hidden mb-6 group-hover:bg-teal-50/70 transition">
-                                <div class="text-center p-6">
-                                    <div class="w-24 h-24 rounded-2xl bg-white/90 shadow-sm mx-auto flex items-center justify-center p-3 group-hover:scale-110 transition duration-300 mb-3 border border-slate-100">
-                                        @if(str_contains(strtolower($product->name), 'tablet') || str_contains(strtolower($product->name), 'capsule'))
-                                            <img src="{{ asset('images/3d/tablet_pack.png') }}" alt="{{ $product->name }}" class="w-full h-full object-contain filter drop-shadow">
-                                        @elseif(str_contains(strtolower($product->name), 'liquid') || str_contains(strtolower($product->name), 'syrup'))
-                                            <img src="{{ asset('images/3d/medicine_bottle.png') }}" alt="{{ $product->name }}" class="w-full h-full object-contain filter drop-shadow">
-                                        @elseif(str_contains(strtolower($product->name), 'injectable') || str_contains(strtolower($product->name), 'infusion'))
-                                            <img src="{{ asset('images/3d/transfusion.png') }}" alt="{{ $product->name }}" class="w-full h-full object-contain filter drop-shadow">
-                                        @elseif(str_contains(strtolower($product->name), 'ointment') || str_contains(strtolower($product->name), 'derma'))
-                                            <img src="{{ asset('images/3d/first_aid.png') }}" alt="{{ $product->name }}" class="w-full h-full object-contain filter drop-shadow">
-                                        @elseif(str_contains(strtolower($product->name), 'nutra') || str_contains(strtolower($product->name), 'immunity'))
-                                            <img src="{{ asset('images/3d/dna.png') }}" alt="{{ $product->name }}" class="w-full h-full object-contain filter drop-shadow">
-                                        @elseif(str_contains(strtolower($product->name), 'cardio') || str_contains(strtolower($product->name), 'heart'))
-                                            <img src="{{ asset('images/3d/heart.png') }}" alt="{{ $product->name }}" class="w-full h-full object-contain filter drop-shadow">
-                                        @else
-                                            <img src="{{ asset('images/3d/prescription_pills.png') }}" alt="{{ $product->name }}" class="w-full h-full object-contain filter drop-shadow">
-                                        @endif
-                                    </div>
-                                    <span class="font-serif text-xl font-bold text-slate-800 tracking-tight block">
-                                        {{ $product->name }}
-                                    </span>
-                                    <span class="text-[10px] tracking-widest uppercase text-teal-700 font-bold mt-1 block">
-                                        WHO-GMP Tested Quality
-                                    </span>
-                                </div>
-
-                                <div class="absolute bottom-3 right-3 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-lg border border-slate-200 text-slate-900 font-bold text-xs shadow-2xs">
-                                    {{ $product->size }}
-                                </div>
-                            </div>
-
-                            <!-- Tagline -->
-                            @if($product->tagline)
-                                <p class="text-xs text-teal-700 font-bold tracking-wide uppercase mb-2">
-                                    {{ $product->tagline }}
-                                </p>
-                            @endif
-
-                            @if($product->description)
-                                <p class="text-sm text-slate-500 leading-relaxed font-light mb-6 line-clamp-3">
-                                    {{ $product->description }}
-                                </p>
-                            @endif
-
-                            <!-- Specs List -->
-                            @if(!empty($specs) && count($specs) > 0)
-                                <div class="space-y-2.5 mb-8 bg-slate-50/80 p-4 rounded-xl border border-slate-100">
-                                    @foreach(array_slice($specs, 0, 4) as $specKey => $specValue)
-                                        <div class="flex justify-between items-center text-xs">
-                                            <span class="text-slate-500 font-medium">{{ $specKey }}</span>
-                                            <span class="font-semibold text-slate-800 text-right">{{ $specValue }}</span>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            @endif
-                        </div>
-
-                        <!-- Action Buttons -->
-                        <div class="flex flex-col gap-2.5 pt-4 border-t border-slate-100">
-                            @if(!empty($brand['whatsapp_number']))
-                                <a href="https://wa.me/{{ $brand['whatsapp_number'] }}?text={{ urlencode($waMsg) }}"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs sm:text-sm py-3 px-4 rounded-xl shadow-xs transition duration-200">
-                                    <i class="fa-brands fa-whatsapp text-lg"></i> Enquire via WhatsApp
-                                </a>
-                            @endif
-
-                            <div class="grid grid-cols-2 gap-2">
-                                <a href="{{ route('contact') }}"
-                                   class="flex items-center justify-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs py-2.5 px-3 rounded-xl transition duration-200">
-                                    <span>MD Office</span>
-                                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                                </a>
-
-                                <button @click="openEnquiryFor('{{ $product->name }}', '{{ $product->size }}')"
-                                        class="flex items-center justify-center gap-1 bg-slate-900 hover:bg-sky-800 text-white font-semibold text-xs py-2.5 px-3 rounded-xl transition duration-200">
-                                    <span>Get Quote</span>
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
+                    </a>
                 @endforeach
             </div>
 

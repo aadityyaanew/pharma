@@ -58,25 +58,43 @@ class ProductController extends Controller
      */
     public function show(string $slug): View
     {
-        $product = Product::active()
-            ->where('slug', $slug)
-            ->firstOrFail();
+        try {
+            $product = Product::active()
+                ->where('slug', $slug)
+                ->first();
+        } catch (\Throwable $e) {
+            $product = null;
+        }
 
-        $relatedProducts = Product::active()
-            ->where('id', '!=', $product->id)
-            ->where(function ($q) use ($product) {
-                $q->where('category', $product->category);
-            })
-            ->take(3)
-            ->get();
+        if (!$product) {
+            $configProducts = config('velora.products', []);
+            $found = collect($configProducts)->firstWhere('id', $slug);
+            if ($found) {
+                $product = (object) [
+                    'id' => 0,
+                    'name' => $found['name'],
+                    'slug' => $found['id'],
+                    'size' => $found['size'],
+                    'category' => $found['size'],
+                    'badge' => $found['badge'] ?? null,
+                    'tagline' => $found['tagline'] ?? null,
+                    'description' => $found['description'] ?? null,
+                    'specs' => $found['specs'] ?? [],
+                    'whatsapp_text' => $found['whatsapp_text'] ?? null,
+                    'featured_image' => null,
+                ];
+            } else {
+                abort(404);
+            }
+        }
 
-        if ($relatedProducts->count() < 3) {
-            $fallback = Product::active()
-                ->where('id', '!=', $product->id)
-                ->whereNotIn('id', $relatedProducts->pluck('id'))
-                ->take(3 - $relatedProducts->count())
+        try {
+            $relatedProducts = Product::active()
+                ->where('id', '!=', $product->id ?? 0)
+                ->take(3)
                 ->get();
-            $relatedProducts = $relatedProducts->concat($fallback);
+        } catch (\Throwable $e) {
+            $relatedProducts = collect();
         }
 
         return view('products.show', compact('product', 'relatedProducts'));

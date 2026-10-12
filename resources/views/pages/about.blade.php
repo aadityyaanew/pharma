@@ -49,7 +49,7 @@
                     Led by Managing Director {{ $brand['managing_director'] ?? 'Mr. Dev Patel' }}
                 </h2>
                 <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                    Under the stewardship of Managing Director Mr. Dev Patel, Jay Ambe Life Care was founded with an uncompromising ethos: to provide clinicians, hospitals, and distributor partners with pharmaceutical formulations that meet rigorous bio-efficacy, safety, and regulatory standards.
+                    Led by Managing Director Mr. Dev Patel, Jay Ambe Life Care is dedicated to supplying healthcare professionals, distributors, and chemists with reliable, high-quality medicines backed by consistent availability and strict standards.
                 </p>
             </div>
         </div>
@@ -57,33 +57,33 @@
         <!-- Narrative Section -->
         <div class="prose prose-lg prose-slate max-w-none space-y-8 text-slate-700">
             <div>
-                <h3 class="text-2xl font-serif font-bold text-slate-900 mb-4">Our Corporate Vision</h3>
-                <p class="leading-relaxed">
-                    <strong>Jay Ambe Life Care</strong> operates as an integrated pharmaceutical enterprise located at <em>Nilkanth Sky, Shop No. 88 Ground Floor, Opp APMC Nava Bazar Flyover, Karjan, District Vadodara, Gujarat (PIN: 391240)</em>. We bridge the gap between complex pharmaceutical manufacturing and frontline medical delivery.
+                <h3 class="text-2xl font-serif font-bold text-slate-900 mb-3">About Our Company</h3>
+                <p class="leading-relaxed text-sm sm:text-base text-slate-600 font-normal">
+                    <strong>Jay Ambe Life Care</strong> is based at <em>Nilkanth Sky, Shop No. 88 Ground Floor, Opp APMC Nava Bazar Flyover, Karjan, District Vadodara, Gujarat (PIN: 391240)</em>. We bridge reliable pharmaceutical manufacturing with prompt healthcare supply across Gujarat and pan-India.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 not-prose">
-                <div class="p-8 rounded-3xl bg-gradient-to-br from-white to-sky-50/50 border border-slate-200/80 space-y-4 shadow-sm hover:shadow-md transition">
-                    <div class="w-16 h-16 rounded-2xl bg-sky-100/60 p-2.5 flex items-center justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 not-prose">
+                <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 space-y-3 hover:shadow-xs transition">
+                    <div class="w-14 h-14 rounded-2xl bg-sky-100/70 p-2.5 flex items-center justify-center">
                         <img src="{{ asset('images/3d/dna.png') }}" alt="Our Mission" class="w-full h-full object-contain filter drop-shadow">
                     </div>
                     <div>
-                        <h4 class="font-serif font-bold text-xl text-slate-900">Our Mission</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed font-light mt-2">
-                            To manufacture and distribute therapeutically sound, DCGI-approved formulations that accelerate patient recovery while offering our PCD franchise partners unmatched commercial viability and ethical growth.
+                        <h4 class="font-serif font-bold text-lg text-slate-900">Our Mission</h4>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-light mt-1.5">
+                            To supply safe, effective, and affordable medicines while offering our PCD franchise partners long-term commercial growth and dedicated district support.
                         </p>
                     </div>
                 </div>
 
-                <div class="p-8 rounded-3xl bg-gradient-to-br from-white to-teal-50/50 border border-slate-200/80 space-y-4 shadow-sm hover:shadow-md transition">
-                    <div class="w-16 h-16 rounded-2xl bg-teal-100/60 p-2.5 flex items-center justify-center">
-                        <img src="{{ asset('images/3d/shield.png') }}" alt="Quality Doctrine" class="w-full h-full object-contain filter drop-shadow">
+                <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 space-y-3 hover:shadow-xs transition">
+                    <div class="w-14 h-14 rounded-2xl bg-teal-100/70 p-2.5 flex items-center justify-center">
+                        <img src="{{ asset('images/3d/shield.png') }}" alt="Quality Commitment" class="w-full h-full object-contain filter drop-shadow">
                     </div>
                     <div>
-                        <h4 class="font-serif font-bold text-xl text-slate-900">Quality Doctrine</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed font-light mt-2">
-                            Zero compromise on active ingredient potency, cleanroom sterility, or stability parameters. Every commercial batch is backed by comprehensive chromatographic testing and authenticated COA documentation.
+                        <h4 class="font-serif font-bold text-lg text-slate-900">Quality Commitment</h4>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-light mt-1.5">
+                            Zero compromise on medicine potency, sterility, or packaging. Every batch is thoroughly tested to guarantee patient safety and shelf-life stability.
                         </p>
                     </div>
                 </div>

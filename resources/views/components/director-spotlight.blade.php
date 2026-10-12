@@ -53,32 +53,32 @@
                         <i class="fa-solid fa-quote-left"></i> Managing Director's Message
                     </div>
 
-                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-white leading-tight">
-                        "Committed to Honest Healthcare and Sustainable Growth for Our Partners."
+                    <h2 class="font-serif text-3xl sm:text-4xl font-medium text-white leading-tight">
+                        "Committed to Quality Medicines & Long-Term Partnerships."
                     </h2>
 
-                    <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed font-light">
+                    <div class="space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed font-light">
                         <p>
-                            "Welcome to <strong>Jay Ambe Life Care</strong>. When we established our pharmaceutical base at Karjan, Vadodara, our principle was simple: every batch must be therapeutically reliable, and every business association must be built on mutual trust and transparency."
+                            "Welcome to <strong>Jay Ambe Life Care</strong>. Based in Karjan, Vadodara, we focus on delivering reliable medicines and supporting our franchise partners with honest business practices and timely supply."
                         </p>
                         <p>
-                            "We understand the responsibilities of our franchise partners, chemists, and hospital procurement teams. You need consistent batch availability, authenticated COA reports, strict territorial monopoly, and direct access to leadership. Whether you are expanding your distribution in Gujarat or securing exclusive PCD rights, my desk is directly accessible to you."
+                            "Whether you run a hospital, medical store, or wish to start a PCD pharma franchise in your district, my team and I are directly here to help you grow."
                         </p>
                     </div>
 
-                    <!-- Authentic Commercial Guarantees -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-800">
-                        <div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/60">
-                            <p class="font-bold text-white text-sm">Monopoly Protection</p>
-                            <p class="text-xs text-slate-400 mt-1">Guaranteed district-wise exclusivity</p>
+                    <!-- 3 Simple Guarantees -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-3 border-t border-slate-800">
+                        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60">
+                            <p class="font-bold text-white text-sm">District Monopoly</p>
+                            <p class="text-xs text-slate-400 mt-0.5">Exclusive marketing rights</p>
                         </div>
-                        <div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/60">
-                            <p class="font-bold text-white text-sm">Complete Visual Aids</p>
-                            <p class="text-xs text-slate-400 mt-1">LBLs, MR bags & product catch covers</p>
+                        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60">
+                            <p class="font-bold text-white text-sm">Marketing Support</p>
+                            <p class="text-xs text-slate-400 mt-0.5">Visual aids, samples & bags</p>
                         </div>
-                        <div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/60">
-                            <p class="font-bold text-white text-sm">Vadodara Dispatch</p>
-                            <p class="text-xs text-slate-400 mt-1">Same-day order processing</p>
+                        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60">
+                            <p class="font-bold text-white text-sm">On-Time Dispatch</p>
+                            <p class="text-xs text-slate-400 mt-0.5">Prompt supply from Vadodara</p>
                         </div>
                     </div>
 

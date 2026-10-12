@@ -10,12 +10,9 @@
             </span>
             <span class="text-slate-700">|</span>
             <span class="inline-flex items-center gap-1.5 text-slate-300 font-medium">
-                <i class="fa-solid fa-user-tie text-sky-400"></i> MD: <strong class="text-white">{{ $brand['managing_director'] ?? 'Mr. Dev Patel' }}</strong>
+                <i class="fa-solid fa-user-tie text-sky-400"></i>  <strong class="text-white">{{ $brand['managing_director'] ?? 'Mr. Dev Patel' }}</strong>
             </span>
-            <span class="hidden lg:inline-block text-slate-700">|</span>
-            <span class="hidden lg:inline-flex items-center gap-1 text-slate-400 text-[11px]">
-                <i class="fa-solid fa-certificate text-teal-400"></i> WHO-GMP Standards & ISO 9001:2015
-            </span>
+
         </div>
         
         <div class="flex items-center gap-5 text-slate-300 text-xs">

@@ -39,16 +39,16 @@
             <!-- Links Sections -->
             <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
                 
-                <!-- Therapeutic Divisions -->
+                <!-- Medicine Divisions -->
                 <div>
-                    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-5 text-teal-400">Divisions</h4>
+                    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-5 text-teal-400">Our Medicines</h4>
                     <ul class="space-y-3.5 text-xs font-light">
                         <li><a href="{{ route('products.index') }}" class="hover:text-white transition-colors">Tablets & Capsules</a></li>
                         <li><a href="{{ route('products.index') }}" class="hover:text-white transition-colors">Liquid Orals & Syrups</a></li>
-                        <li><a href="{{ route('home') }}#critical-care" class="hover:text-white transition-colors">Sterile Injectables (ICU)</a></li>
-                        <li><a href="{{ route('products.index') }}" class="hover:text-white transition-colors">Dermatological Topicals</a></li>
-                        <li><a href="{{ route('products.index') }}" class="hover:text-white transition-colors">Nutraceuticals & Wellness</a></li>
-                        <li><a href="{{ route('home') }}#sectors" class="hover:text-teal-400 transition-colors text-teal-400 font-medium">PCD Franchise Monopoly</a></li>
+                        <li><a href="{{ route('products.index') }}" class="hover:text-white transition-colors">Sterile Injections</a></li>
+                        <li><a href="{{ route('products.index') }}" class="hover:text-white transition-colors">Ointments & Gels</a></li>
+                        <li><a href="{{ route('products.index') }}" class="hover:text-white transition-colors">Nutraceuticals</a></li>
+                        <li><a href="{{ route('contact') }}" class="hover:text-teal-400 transition-colors text-teal-400 font-medium">PCD Franchise Monopoly</a></li>
                     </ul>
                 </div>
 
@@ -56,10 +56,10 @@
                 <div>
                     <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-5 text-teal-400">Company</h4>
                     <ul class="space-y-3.5 text-xs font-light">
-                        <li><a href="{{ route('about') }}" class="hover:text-white transition-colors">About Our Company</a></li>
+                        <li><a href="{{ route('about') }}" class="hover:text-white transition-colors">About Jay Ambe Life Care</a></li>
                         <li><a href="{{ route('home') }}#leadership" class="hover:text-white transition-colors">Managing Director</a></li>
-                        <li><a href="{{ route('home') }}#quality" class="hover:text-white transition-colors">WHO-GMP Quality</a></li>
-                        <li><a href="{{ route('contact') }}" class="hover:text-white transition-colors">Commercial Desk</a></li>
+                        <li><a href="{{ route('home') }}#why-choose-us" class="hover:text-white transition-colors">Why Choose Us</a></li>
+                        <li><a href="{{ route('contact') }}" class="hover:text-white transition-colors">Contact Us</a></li>
                         <li><a href="{{ route('blog.index') }}" class="hover:text-white transition-colors">Pharma Journal</a></li>
                         <li><a href="{{ route('privacy') }}" class="hover:text-white transition-colors">Privacy Policy</a></li>
                         <li><a href="{{ route('terms') }}" class="hover:text-white transition-colors">Terms of Supply</a></li>
@@ -113,7 +113,7 @@
         <div class="border-t border-slate-800/80 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-light text-slate-500">
             <div class="flex items-center gap-2 text-[11px]">
                 <i class="fa-solid fa-shield-halved text-teal-400"></i>
-                <span>WHO-GMP Compliant • ISO 9001:2015 Certified • DCGI Standards</span>
+                <span>Pharmaceuticals & Healthcare Solutions • Vadodara, Gujarat</span>
             </div>
             
             <p class="text-center md:text-left">
