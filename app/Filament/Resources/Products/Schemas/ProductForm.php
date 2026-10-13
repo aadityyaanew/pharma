@@ -24,7 +24,7 @@ class ProductForm
                             ->label('Product Name')
                             ->required()
                             ->maxLength(255)
-                            ->placeholder('e.g. VELORA Dining Standard')
+                            ->placeholder('e.g. Amoxicillin & Potassium Clavulanate Tablets')
                             ->live(onBlur: true)
                             ->afterStateUpdated(function (string $operation, $state, callable $set) {
                                 if ($operation === 'create') {
@@ -38,31 +38,33 @@ class ProductForm
                             ->unique(ignoreRecord: true),
 
                         TextInput::make('size')
-                            ->label('Volume / Size')
+                            ->label('Dosage / Packaging Size')
                             ->required()
                             ->maxLength(100)
-                            ->placeholder('e.g. 1 LITER or 500 ML'),
+                            ->placeholder('e.g. 10x10 Alu-Alu Strip, 100 ml Syrup, 1 Vial'),
 
                         Select::make('category')
                             ->options([
-                                'Personal & Events' => 'Personal & Events',
-                                'Dining & Athletic' => 'Dining & Athletic',
-                                'Bulk & Dispenser' => 'Bulk & Dispenser',
-                                'Alkaline Water' => 'Alkaline Water',
-                                'Packaged Drinking Water' => 'Packaged Drinking Water',
+                                'Tablets & Capsules' => 'Tablets & Capsules',
+                                'Liquid Orals & Syrups' => 'Liquid Orals & Syrups',
+                                'Sterile Injectables' => 'Sterile Injectables',
+                                'Dermatological Topicals' => 'Dermatological Topicals',
+                                'Nutraceuticals & Wellness' => 'Nutraceuticals & Wellness',
+                                'PCD Pharma Franchise' => 'PCD Pharma Franchise',
+                                'Pharmaceutical Formulations' => 'Pharmaceutical Formulations',
                             ])
-                            ->default('Packaged Drinking Water')
+                            ->default('Tablets & Capsules')
                             ->required(),
 
                         TextInput::make('badge')
                             ->label('Badge / Label')
                             ->maxLength(100)
-                            ->placeholder('e.g. Signature Format, Boutique & Aviation'),
+                            ->placeholder('e.g. High Efficacy Formulation, DCGI Approved'),
 
                         TextInput::make('tagline')
                             ->label('Tagline')
                             ->maxLength(255)
-                            ->placeholder('e.g. The Gold Standard for Tables & Restaurants'),
+                            ->placeholder('e.g. WHO-GMP Certified High Efficacy Oral Solid Dosage'),
 
                         TextInput::make('price')
                             ->label('Indicative Price (₹)')
@@ -82,19 +84,21 @@ class ProductForm
                 Section::make('Visuals & Media')
                     ->schema([
                         FileUpload::make('featured_image')
-                            ->label('Product Bottle / Packaging Image')
+                            ->label('Product Packaging / Box Image')
                             ->image()
+                            ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                            ->maxSize(5120)
                             ->disk('public')
                             ->directory('products')
-                            ->imageResizeMode('cover')
+                            ->visibility('public')
                             ->columnSpanFull()
-                            ->helperText('Upload a clean transparent PNG or high-res JPG of the bottle/container.'),
+                            ->helperText('Upload a clean transparent PNG or high-res JPG/WEBP of the box, blister pack, or bottle (Max 5MB).'),
 
                         Textarea::make('description')
                             ->label('Product Description')
                             ->rows(4)
                             ->columnSpanFull()
-                            ->placeholder('Describe the purity specifications, cleanroom bottling, ergonomic grip, and usage scenarios.'),
+                            ->placeholder('Describe therapeutic indications, active ingredients, dosage guidance, packaging, and cleanroom manufacturing specifications.'),
                     ]),
 
                 Section::make('Technical Specifications & Inquiries')
@@ -103,13 +107,13 @@ class ProductForm
                             ->label('Product Specifications')
                             ->keyLabel('Specification')
                             ->valueLabel('Detail')
-                            ->helperText('e.g. Packaging: BPA-Free Food Grade PET, Cap Type: Aura-Sealed Safety Cap, Carton Size: 24 Units')
+                            ->helperText('e.g. Packaging Formats: 10x10 Alu-Alu, Quality Standard: WHO-GMP, Therapeutic Segment: Antibiotics')
                             ->columnSpanFull(),
 
                         TextInput::make('whatsapp_text')
                             ->label('WhatsApp Enquiry Template')
                             ->maxLength(255)
-                            ->placeholder('Hi Velora Pure, I would like to enquire about bulk supply for this format.')
+                            ->placeholder('Hi Jay Ambe Life Care, I would like to enquire about bulk supply and franchise for this product.')
                             ->columnSpanFull()
                             ->helperText('Pre-filled message when customers click "Enquire via WhatsApp".'),
                     ]),

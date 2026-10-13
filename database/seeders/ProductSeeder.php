@@ -23,7 +23,7 @@ class ProductSeeder extends Seeder
                     'size' => $item['size'],
                     'badge' => $item['badge'] ?? null,
                     'category' => match ($item['id'] ?? '') {
-                        'tablets-capsules' => 'Tablets & Capsules',
+                        'abpara-sp', 'tablets-capsules' => 'Tablets & Capsules',
                         'liquid-orals' => 'Liquid Orals & Syrups',
                         'injectables' => 'Sterile Injectables',
                         'derma-topical' => 'Dermatological Topicals',

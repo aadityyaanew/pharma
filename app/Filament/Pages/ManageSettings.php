@@ -92,20 +92,20 @@ class ManageSettings extends Page
                                         TextInput::make('email')
                                             ->label('Official Email Address')
                                             ->email()
-                                            ->placeholder('info@velorapure.com')
+                                            ->placeholder('pdev63575@gmail.com')
                                             ->helperText('Main correspondence email displayed across headers and contact forms.'),
 
                                         TextInput::make('support_email')
                                             ->label('Support / Commercial Email')
                                             ->email()
-                                            ->placeholder('support@velorapure.com')
+                                            ->placeholder('pdev63575@gmail.com')
                                             ->helperText('Optional secondary email for commercial orders.'),
 
                                         Textarea::make('address')
                                             ->label('Office / Bottling Facility Address')
                                             ->rows(3)
                                             ->columnSpanFull()
-                                            ->placeholder('Industrial Area, Bottling Plant Boulevard, VELORA Hydration Facility')
+                                            ->placeholder('Nilkanth sky, Jay Ambe Life Care, shop no. 88 ground floor, opp APMC Nava Bazar flyover Karjan district: Vadodara Gujarat pin Code: 391240')
                                             ->helperText('Physical premises address shown in contact sections and footer.'),
                                     ])
                                     ->columns(2),
@@ -134,31 +134,31 @@ class ManageSettings extends Page
                                         TextInput::make('facebook')
                                             ->label('Facebook Profile / Page URL')
                                             ->url()
-                                            ->placeholder('https://facebook.com/velorapure'),
+                                            ->placeholder('https://facebook.com/jayambelifecare'),
 
                                         TextInput::make('instagram')
                                             ->label('Instagram Profile URL')
                                             ->url()
-                                            ->placeholder('https://www.instagram.com/velorapure'),
+                                            ->placeholder('https://www.instagram.com/jayambelifecare'),
 
                                         TextInput::make('instagram_handle')
                                             ->label('Instagram Handle (@username)')
-                                            ->placeholder('@velorapure'),
+                                            ->placeholder('@jayambelifecare'),
 
                                         TextInput::make('linkedin')
                                             ->label('LinkedIn Profile / Company URL')
                                             ->url()
-                                            ->placeholder('https://linkedin.com/company/velorapure'),
+                                            ->placeholder('https://linkedin.com/company/jayambelifecare'),
 
                                         TextInput::make('youtube')
                                             ->label('YouTube Channel URL')
                                             ->url()
-                                            ->placeholder('https://youtube.com/@velorapure'),
+                                            ->placeholder('https://youtube.com/@jayambelifecare'),
 
                                         TextInput::make('x')
                                             ->label('X (formerly Twitter) URL')
                                             ->url()
-                                            ->placeholder('https://x.com/velorapure'),
+                                            ->placeholder('https://x.com/jayambelifecare'),
                                     ])
                                     ->columns(2),
                             ]),
@@ -170,18 +170,18 @@ class ManageSettings extends Page
                                     ->schema([
                                         TextInput::make('name')
                                             ->label('Brand / Website Name')
-                                            ->placeholder('VELORA PURE')
+                                            ->placeholder('Jay Ambe Life Care')
                                             ->helperText('Primary brand name.'),
 
                                         TextInput::make('tagline')
                                             ->label('Brand Tagline / Slogan')
-                                            ->placeholder('PURE BY NATURE 💧 TRUSTED WORLDWIDE')
+                                            ->placeholder('COMMITTED TO HEALTH • DEDICATED TO LIFE')
                                             ->columnSpanFull()
                                             ->helperText('Hero banner and brand motto.'),
 
                                         TextInput::make('copyright_text')
                                             ->label('Footer Copyright Notice')
-                                            ->placeholder('© ' . date('Y') . ' VELORA PURE. All Rights Reserved.')
+                                            ->placeholder('© ' . date('Y') . ' Jay Ambe Life Care. All Rights Reserved.')
                                             ->columnSpanFull()
                                             ->helperText('Custom copyright text displayed at the base of the site.'),
                                     ]),

@@ -38,17 +38,17 @@ class PostForm
 
                         Select::make('category')
                             ->options([
-                                'Hydration & Health' => 'Hydration & Health',
-                                'Water Quality' => 'Water Quality',
-                                'Industry & B2B' => 'Industry & B2B',
+                                'Quality & Compliance' => 'Quality & Compliance',
+                                'Pharma Business & Franchise' => 'Pharma Business & Franchise',
+                                'Hospital & Therapeutics' => 'Hospital & Therapeutics',
+                                'Formulation Science' => 'Formulation Science',
                                 'Company News' => 'Company News',
-                                'Sustainability' => 'Sustainability',
                             ])
-                            ->default('Hydration & Health')
+                            ->default('Quality & Compliance')
                             ->required(),
 
                         TextInput::make('author_name')
-                            ->default('Velora Pure Editorial')
+                            ->default('Jay Ambe Life Care Editorial')
                             ->required()
                             ->maxLength(255),
 

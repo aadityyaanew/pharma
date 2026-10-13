@@ -34,20 +34,22 @@ return [
     */
     'products' => [
         [
-            'id' => 'tablets-capsules',
-            'size' => 'Oral Solid Dosage',
-            'name' => 'Pharmaceutical Tablets & Capsules',
-            'badge' => 'High Efficacy Formulations',
+            'id' => 'abpara-sp',
+            'size' => '10 x 10 Tablets (Alu-Alu)',
+            'name' => 'Abpara-SP Tablets',
+            'badge' => 'Flagship Solid Dosage',
             'popular' => true,
-            'tagline' => 'DCGI Approved Solid Dosage Formulations',
-            'description' => 'Comprehensive range of pharmaceutical tablets and hard gelatin capsules manufactured under strict cGMP norms. Includes antibiotics, pain management, cardiac, diabetic, and gastrointestinal therapeutics.',
+            'tagline' => 'Aceclofenac, Paracetamol & Serratiopeptidase Tablets',
+            'description' => 'Abpara-SP is a triple-action analgesic, antipyretic, and anti-inflammatory formulation containing Aceclofenac IP 100 mg, Paracetamol IP 325 mg, and Serratiopeptidase IP 15 mg (as enteric-coated granules eq. to 30,000 Serratiopeptidase units). Supplied in premium 10x10 Alu-Alu blister packaging with brand embossing and drip-off carton finish.',
             'specs' => [
-                'Dosage Types' => 'Film-Coated, Enteric-Coated, Sustained Release',
-                'Therapeutic Segments' => 'Antibiotics, NSAIDs, Cardiac, Gastro, Diabetic',
-                'Packaging Formats' => 'Alu-Alu, Blister & Strip Packaging',
-                'Quality Compliance' => 'WHO-GMP Standards & IP/BP/USP Specifications',
+                'Generic Composition' => 'Aceclofenac 100 mg + Paracetamol 325 mg + Serratiopeptidase 15 mg (30,000 units)',
+                'Packaging Format' => '10 x 10 Tablets (229 mm Alu-Alu Foil / 3T-10T)',
+                'Dosage Form' => 'Film Coated Tablets with Enteric Coated Granules',
+                'Carton Dimensions' => 'L 120 x W 70 x H 75 mm (Brand Name Embossed)',
+                'Manufacturing Quality' => 'WHO-GMP Certified Facility • Schedule H Prescription Drug',
+                'Therapeutic Segment' => 'Pain Management, Orthopedics, Trauma, Dental & Post-Operative Inflammation',
             ],
-            'whatsapp_text' => 'Hi Jay Ambe Life Care, I would like to enquire about bulk supply and franchise for Pharmaceutical Tablets & Capsules.',
+            'whatsapp_text' => 'Hi Mr. Dev Patel / Jay Ambe Life Care, I would like to enquire about bulk supply and PCD franchise allocation for Abpara-SP Tablets (10x10 Alu-Alu).',
         ],
         [
             'id' => 'liquid-orals',

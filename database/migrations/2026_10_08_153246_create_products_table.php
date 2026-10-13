@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('size');
             $table->string('badge')->nullable();
-            $table->string('category')->default('Packaged Drinking Water');
+            $table->string('category')->default('Tablets & Capsules');
             $table->string('tagline')->nullable();
             $table->text('description')->nullable();
             $table->decimal('price', 10, 2)->nullable();

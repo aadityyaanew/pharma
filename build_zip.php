@@ -78,6 +78,9 @@ foreach ($iterator as $item) {
 // Make sure storage directories exist even if empty
 $emptyDirs = [
     'storage/app/public',
+    'storage/app/public/products',
+    'storage/app/public/blog',
+    'storage/app/private/livewire-tmp',
     'storage/framework/cache/data',
     'storage/framework/sessions',
     'storage/framework/views',

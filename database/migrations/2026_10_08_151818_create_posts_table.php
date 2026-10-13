@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('featured_image')->nullable();
             $table->text('excerpt')->nullable();
             $table->longText('content');
-            $table->string('author_name')->default('Velora Pure Editorial');
+            $table->string('author_name')->default('Jay Ambe Life Care Editorial');
             $table->string('category')->default('General');
             $table->boolean('is_published')->default(true);
             $table->timestamp('published_at')->nullable();

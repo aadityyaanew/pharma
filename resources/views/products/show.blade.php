@@ -45,7 +45,9 @@
                     <div class="relative w-full aspect-square rounded-2xl bg-gradient-to-br from-slate-100 to-teal-50 border border-slate-200/70 flex items-center justify-center p-6 sm:p-8 overflow-hidden group">
                         <div class="text-center">
                             <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-2xl sm:rounded-3xl bg-white shadow-xl mx-auto flex items-center justify-center p-4 mb-3 sm:mb-4 group-hover:scale-105 transition duration-300 border border-slate-100">
-                                @if(str_contains(strtolower($product->name), 'tablet') || str_contains(strtolower($product->name), 'capsule'))
+                                @if(!empty($product->featured_image))
+                                    <img src="{{ asset('storage/' . $product->featured_image) }}" alt="{{ $product->name }}" class="w-full h-full object-contain filter drop-shadow">
+                                @elseif(str_contains(strtolower($product->name), 'tablet') || str_contains(strtolower($product->name), 'capsule'))
                                     <img src="{{ asset('images/3d/tablet_pack.png') }}" alt="{{ $product->name }}" class="w-full h-full object-contain filter drop-shadow">
                                 @elseif(str_contains(strtolower($product->name), 'liquid') || str_contains(strtolower($product->name), 'syrup'))
                                     <img src="{{ asset('images/3d/medicine_bottle.png') }}" alt="{{ $product->name }}" class="w-full h-full object-contain filter drop-shadow">

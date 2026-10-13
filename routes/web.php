@@ -38,3 +38,13 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 Route::post('/enquiry', [EnquiryController::class, 'store'])->name('enquiry.store');
+
+// Production helper route to create storage symlink if SSH terminal is unavailable on Hostinger
+Route::get('/fix-storage-link', function () {
+    try {
+        \Illuminate\Support\Facades\Artisan::call('storage:link');
+        return response('Storage link created successfully: ' . \Illuminate\Support\Facades\Artisan::output(), 200);
+    } catch (\Throwable $e) {
+        return response('Error creating storage link: ' . $e->getMessage(), 500);
+    }
+});

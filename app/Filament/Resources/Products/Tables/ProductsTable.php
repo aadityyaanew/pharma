@@ -74,11 +74,13 @@ class ProductsTable
             ->filters([
                 SelectFilter::make('category')
                     ->options([
-                        'Personal & Events' => 'Personal & Events',
-                        'Dining & Athletic' => 'Dining & Athletic',
-                        'Bulk & Dispenser' => 'Bulk & Dispenser',
-                        'Alkaline Water' => 'Alkaline Water',
-                        'Packaged Drinking Water' => 'Packaged Drinking Water',
+                        'Tablets & Capsules' => 'Tablets & Capsules',
+                        'Liquid Orals & Syrups' => 'Liquid Orals & Syrups',
+                        'Sterile Injectables' => 'Sterile Injectables',
+                        'Dermatological Topicals' => 'Dermatological Topicals',
+                        'Nutraceuticals & Wellness' => 'Nutraceuticals & Wellness',
+                        'PCD Pharma Franchise' => 'PCD Pharma Franchise',
+                        'Pharmaceutical Formulations' => 'Pharmaceutical Formulations',
                     ]),
                 TernaryFilter::make('is_active')
                     ->label('Active status'),
