@@ -39,11 +39,34 @@ Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 Route::post('/enquiry', [EnquiryController::class, 'store'])->name('enquiry.store');
 
+// Fallback to directly stream public storage files if Apache symlink is blocked (403 fix)
+Route::get('/storage/{path}', function (string $path) {
+    $filePath = storage_path('app/public/' . $path);
+    if (!file_exists($filePath)) {
+        abort(404);
+    }
+    return response()->file($filePath, [
+        'Cache-Control' => 'public, max-age=31536000',
+    ]);
+})->where('path', '.*');
+
 // Production helper route to create storage symlink if SSH terminal is unavailable on Hostinger
 Route::get('/fix-storage-link', function () {
     try {
+        $link = public_path('storage');
+        $target = storage_path('app/public');
+        
+        if (!is_dir($target)) {
+            @mkdir($target, 0755, true);
+        }
+        @chmod($target, 0755);
+
+        if (is_link($link)) {
+            @unlink($link);
+        }
+
         \Illuminate\Support\Facades\Artisan::call('storage:link');
-        return response('Storage link created successfully: ' . \Illuminate\Support\Facades\Artisan::output(), 200);
+        return response('Storage link checked and configured successfully: ' . \Illuminate\Support\Facades\Artisan::output(), 200);
     } catch (\Throwable $e) {
         return response('Error creating storage link: ' . $e->getMessage(), 500);
     }

@@ -86,7 +86,6 @@ class ProductForm
                         FileUpload::make('featured_image')
                             ->label('Product Packaging / Box Image')
                             ->image()
-                            ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
                             ->maxSize(5120)
                             ->disk('public')
                             ->directory('products')

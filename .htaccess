@@ -1,4 +1,5 @@
 <IfModule mod_rewrite.c>
+    Options -Indexes +FollowSymLinks
     RewriteEngine On
 
     # Block direct access to sensitive files
@@ -6,6 +7,10 @@
     RewriteRule ^artisan - [F,L,NC]
     RewriteRule ^composer\.(json|lock) - [F,L,NC]
     RewriteRule ^package(-lock)?\.json - [F,L,NC]
+
+    # Directly serve public storage assets if they exist on disk (bypasses symlink restrictions)
+    RewriteCond %{DOCUMENT_ROOT}/storage/app/public/$1 -f
+    RewriteRule ^storage/(.*)$ storage/app/public/$1 [L]
 
     # Route all requests to public directory
     RewriteCond %{REQUEST_URI} !^/public/
